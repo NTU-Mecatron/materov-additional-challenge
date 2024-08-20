@@ -1,12 +1,10 @@
-model_path: "best.pt"
+model_path: "detect/train3/weights/best.pt"
 data: "data.yaml"
 epochs: 150
 imgsz: 640
-batch: 16
+batch: 16     # Increase batch size if your GPU can handle it
 workers: 4
 patience: 20
 single_cls: true
 close_mosaic: 20
-
-# Set cache true if you have enough memory
-# cache: true
+cache: true     # Set cache true if you have enough memory
