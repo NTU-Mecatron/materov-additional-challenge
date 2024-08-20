@@ -12,7 +12,11 @@ overlapping = 0.2
 # Open the video file
 video_path = "seafloor_footage.mp4"
 output_path = "seafloor_footage_annotated.mp4"
-cap = cv2.VideoCapture(video_path)  
+if os.path.exists(output_path):
+    print(f"Error: The output_path already exists.")
+    sys.exit(1)
+else:
+    cap = cv2.VideoCapture(video_path)  
 
 # Get the video frame width, height, and frames per second (fps)
 frame_width = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
