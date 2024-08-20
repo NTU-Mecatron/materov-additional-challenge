@@ -1,0 +1,1 @@
+Things to install: pytorch, ultralytics, pandas, xlsxwriter
