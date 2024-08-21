@@ -2,12 +2,13 @@ import yaml
 from ultralytics import YOLO
 
 # Function to load configuration from YAML file
-def load_config(yaml_file):
-    with open(yaml_file, 'r') as file:
+def load_config(config_path):
+    with open(config _path, 'r') as file:
         config = yaml.safe_load(file)
     return config
 
 if __name__ == "__main__":
+    
     # Load configuration from YAML file
     config = load_config("train_config.yaml")
 
