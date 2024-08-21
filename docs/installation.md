@@ -21,14 +21,14 @@ pip install ultralytics
 ```
 > Note: For any problem faced, please refer to the [ultralytics guide](https://docs.ultralytics.com/quickstart/)
 
-## Installing Pandas
+### Installing Pandas
 To install Pandas, enter the command below to the command-line interface:
 ```bash
 pip install pandas
 ```
 > Note: For complete guide, please refer to the [pandas guide](https://pandas.pydata.org/docs/getting_started/install.html)
 
-## Installing XlsxWriter
+### Installing XlsxWriter
 Enter the command below into the command-line interface:
 ```bash
 pip install XlsxWriter
