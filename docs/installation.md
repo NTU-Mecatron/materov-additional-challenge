@@ -1,38 +1,55 @@
+# Installation
+
+Before installing the packages for this project, ensure that Python and Git-LFS are installed.
+
+## Installing Python
+
+To install Python, follow these steps:
+
+1. Visit the [Python download page](https://www.python.org/downloads/).
+2. Download the latest version suitable for your operating system.
+3. Run the installer and ensure that you check the box to "Add Python to PATH" before proceeding.
+
+For detailed instructions, refer to the official [Python installation guide](https://docs.python.org/3/using/index.html).
+
+## Installing Git-LFS
+
+To install Git-LFS:
+
+1. Visit the [Git-LFS installation guide](https://docs.github.com/en/repositories/working-with-files/managing-large-files/installing-git-large-file-storage).
+2. Follow the installation instructions for your operating system.
+3. After installation, run the following command to enable Git-LFS:
+
+   ```bash
+   git lfs install
+   ```
+
 ## Cloning the Project
 
-Prerequisite: you need to [install Git-LFS](https://docs.github.com/en/repositories/working-with-files/managing-large-files/installing-git-large-file-storage)
+You can clone the project using the following command:
 
-You can clone the project with the following command:
 ```bash
 git clone https://github.com/NTU-Mecatron/materov-additional-challenge.git
 ```
 
 ## Libraries Installation
-Prerequisite: you need to [install Python](https://www.python.org/downloads/)
 
-### Installing Pytorch
-For proper installation guide of Pytorch, please refer to the guide [Pytorch guide](https://pytorch.org/get-started/locally/).
+### Installing All Required Libraries
 
-### Installing Ultralytics
+Once Python is installed, use the following command to install all the required libraries:
 
-In the command-line interface, type in the following command:
+- Pytorch
+- Ultralytics
+- Pandas
+- XlsWriter
+- Supervision
+
 ```bash
-pip install ultralytics
+pip install torch ultralytics pandas XlsxWriter supervision
 ```
-> Note: For any problem faced, please refer to the [ultralytics guide](https://docs.ultralytics.com/quickstart/)
 
-### Installing Pandas
-To install Pandas, enter the command below to the command-line interface:
-```bash
-pip install pandas
-```
-> Note: For complete guide, please refer to the [pandas guide](https://pandas.pydata.org/docs/getting_started/install.html)
-
-### Installing XlsxWriter
-Enter the command below into the command-line interface:
-```bash
-pip install XlsxWriter
-```
-> Note: For complete guide, please refer to the [XlsxWriter guide](https://xlsxwriter.readthedocs.io/getting_started.html)
-
-## Running the project
+> Note:
+- For any issues with PyTorch installation, refer to the [PyTorch guide](https://pytorch.org/get-started/locally/).
+- For problems with Ultralytics installation, check the [Ultralytics guide](https://docs.ultralytics.com/quickstart/).
+- For more details on Pandas, refer to the [Pandas guide](https://pandas.pydata.org/docs/getting_started/install.html).
+- For more details on XlsxWriter, refer to the [XlsxWriter guide](https://xlsxwriter.readthedocs.io/getting_started.html).

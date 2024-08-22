@@ -1,13 +1,18 @@
-# YOLO Training for Brittle Stars
+# Brittle Star Detection with YOLO
 
-## Introduction
+## Overview
 
-This repository is created to guide YOLO models generation for brittle stars detection. It is developed by [Mecatron](https://mecatron.sg/) for 2024 OER MATE ROV Ocean Exploration Video Challenge.
+This repository contains the resources needed to train YOLO models for detecting brittle stars. Developed by [Mecatron](https://mecatron.sg/), this project is part of the 2024 OER MATE ROV Ocean Exploration Video Challenge.
 
-## Included Files:
-- predict.py
-- train.py
+## Repository Contents
+
+- **`train.py`**: Script for training the YOLO model.
+- **`train_config.yaml`**: Configuration file for training parameters used in `train.py`.
+- **`predict.py`**: Script for running predictions using the trained model.
+- **`predict_config.yaml`**: Configuration file for prediction settings used in `predict.py`.
+- **`convert_spreadsheet.py`**: Utility script for converting data from spreadsheets into the required format for training and prediction.
 
 ## Tutorials
-### - [Tutorial 0: Setup Guide](docs/installation.md)
-### - [Tutorial 1: Modification Guide](docs/modification_guide.md)
+
+- **[Setup Guide](docs/installation.md):** Step-by-step instructions for setting up the environment and dependencies.
+- **[Model Training & Prediction Guide](docs/model_training_and_prediction.md):** Detailed guide on training the model and making predictions.

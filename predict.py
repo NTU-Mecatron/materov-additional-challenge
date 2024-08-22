@@ -7,13 +7,13 @@ from signal import signal, SIGINT
 
 # Function to load configuration from YAML file
 def load_config(config_path):
-    with open(config _path, 'r') as file:
+    with open(config_path, 'r') as file:
         config = yaml.safe_load(file)
     return config
 
 # Function for slicer callback
 def slicer_callback(slice: np.ndarray) -> sv.Detections:
-    result = model(slice, imgsz=imgsz, conf=0.1, iou=1)[0]
+    result = model(slice, imgsz=imgsz, conf=config['confidence'], iou=1)[0]
     detections = sv.Detections.from_ultralytics(result)
     return detections
 
@@ -33,8 +33,8 @@ if __name__ == "__main__":
     
     # Load the YOLOv8 model
     model = YOLO(config['model_path'])
-    imgsz = config['imgsz']
-    overlapping = config['overlapping']
+    imgsz = 640 # Image size for training
+    overlapping = 0.2 # Overlap between tiles during inference on a video
     
     # Open the video file
     video_path = config['video_path']
@@ -99,7 +99,7 @@ if __name__ == "__main__":
         
         ## Uncomment the following lines to display class labels
         # annotated_frame = label_annotator.annotate(
-        #     scene=annotated_frame, detections=detections)
+        # scene=annotated_frame, detections=detections)
     
         # Write the frame to the output video
         out.write(annotated_frame)
@@ -110,7 +110,7 @@ if __name__ == "__main__":
         
         # Break the loop if 'q' is pressed
         if cv2.waitKey(2) & 0xFF == ord("q"):
-            break
+           break
     
     # Release the video capture object and close the display window
     cap.release()

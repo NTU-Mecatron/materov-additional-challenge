@@ -1,6 +1,5 @@
+confidence: 0.1
 model_path: "detect/train3/weights/best.pt"
-imgsz: 640
-overlapping: 0.2
 video_path: "seafloor_footage.mp4"
 output_path: "seafloor_footage_annotated.mp4"
 iou_threshold: 0.2

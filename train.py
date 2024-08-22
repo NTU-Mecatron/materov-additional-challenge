@@ -3,7 +3,7 @@ from ultralytics import YOLO
 
 # Function to load configuration from YAML file
 def load_config(config_path):
-    with open(config _path, 'r') as file:
+    with open(config_path, 'r') as file:
         config = yaml.safe_load(file)
     return config
 

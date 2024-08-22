@@ -2,7 +2,7 @@ import pandas as pd
 import xlsxwriter
 
 # Read the CSV file
-csv_file_path = 'spreadsheet.csv'
+csv_file_path = 'spreadsheet.csv' # Source path of csv file
 df = pd.read_csv(csv_file_path)
 
 # Print out the columns in the CSV file
@@ -16,6 +16,7 @@ print(df.columns.tolist())
 
 new_df = pd.DataFrame()
 
+# Map the columns to the format required
 column_mapping = {
     'frame_number': 'Current Frame',
     'x_min': 'X Bound, Left',
@@ -24,12 +25,13 @@ column_mapping = {
     'y_max': 'Y Bound, Lower',
 }
 
+# Map and rename columns from the original DataFrame to the new DataFrame
 for old_col, new_col in column_mapping.items():
     if old_col in df.columns:
         new_df[new_col] = df[old_col]
 
 # Write the rearranged data to an XLS file
-xls_file_path = 'spreadsheet.xlsx'
+xls_file_path = 'spreadsheet.xlsx' # Output path for xlsx file
 new_df.to_excel(xls_file_path, index=False, engine='xlsxwriter')
 
 print(f"Rearranged columns saved to {xls_file_path}")
