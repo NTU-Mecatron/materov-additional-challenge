@@ -1,0 +1,17 @@
+model_path: "training_results/fine_model_150_epochs/weights/best.pt"
+# input_path: "videos/seafloor_footage.mp4"
+input_path: "test/"
+
+## Output path. Comment out to disable saving the video
+# output_path: "videos/seafloor_footage_annotated.mp4"
+
+confidence: 0.2
+iou_threshold: 0.2
+
+## Path to the csv file containing the class names. Comment out to disable saving to csv and xlsx.
+csv_path: "spreadsheet/spreadsheet2.csv"
+
+## Display settings. Comment out to use to disable display during inference
+display_x_axis: 1280
+display_y_axis: 720
+

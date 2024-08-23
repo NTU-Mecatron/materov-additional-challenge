@@ -1,2 +1,4 @@
 venv/
-*.mp4
+test/
+src/__pycache__
+*annotated.mp4
