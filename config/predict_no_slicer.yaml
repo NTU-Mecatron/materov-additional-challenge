@@ -1,14 +1,16 @@
 model_path: "training_results/fine_model_150_epochs/weights/best.pt"
-# input_path: "videos/seafloor_footage.mp4"
-input_path: "test/"
 
-## Output path. Comment out to disable saving the video
+## Input path. Can be a video file or a directory of images
+input_path: "videos/seafloor_footage.mp4"
+# input_path: "test/"
+
+## Output path. If commented out, the inferenced video will not be saved
 # output_path: "videos/seafloor_footage_annotated.mp4"
 
 confidence: 0.15
 iou_threshold: 0.7
 
-## Display settings. Comment out to use to disable display during inference
+## Display settings. If commented out, annotated frames will not be displayed.
 display_x_axis: 1280
 display_y_axis: 720
 
